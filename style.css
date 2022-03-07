@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+:root{
+    --dark-cyan:hsl(185,75%,39%);
+    --very-dark-blue:hsl(229,23%,23%);
+    --dark-grayish:hsl(227,10%,46%);
+    --dark-gray:hsl(0,0%,59%);
+}
+.container{
+    height:100vh;
+    background: var(--dark-cyan);
+    color:var(--very-dark-blue);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.top-bg{
+    position: absolute;
+    background: url("image/bg-pattern-top.svg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 978px;
+    width: 978px;
+    top:-700px;
+    left:-300px;
+}
+.bottom-bg{
+    position: absolute;
+    background: url("image/bg-pattern-bottom.svg");
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 978px;
+    width: 978px;
+    bottom:-700px;
+    right:-300px;
+}
+.card{
+    background: white;
+    height:410px;
+    width: 350px;
+    border-radius: 20px;
+    position: relative;
+}
+.card .bg-img{
+    height:142px;
+    background: url("image/bg-pattern-card.svg");
+    border-radius: 20px 20px 0 0;
+}
+.profile .pic{
+    left:50%;
+    position: absolute;
+    transform:translate(-50%);
+    border-radius: 50%;
+    padding: 5px;
+    top:90px;
+    background: white;
+}
+.profile-info{
+    margin-top: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.profile{
+    width:100%;
+    text-align: center;
+    border-bottom: 1px soild var(--dark-gray);
+    padding-bottom: 25px;
+}
+.profile .name span{
+    font-size: 15px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+.profile .location{
+    color: var(--dark-grayish);
+}
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-top: 23px;
+    text-align: center;
+}
+.status .number{
+   font-size: 15px;
+   font-weight: 700;
+   margin-bottom: 7px;
+}
+.status p{
+    color:var(--dark-grayish);
+}
+
+/* Responsive */
+@media(max-width:375px){
+    .top-bg{
+        height: 375px;
+        width: 375px;
+        top:-160px;
+        left: -167px;
+    }
+    .bottom-bg{
+        height: 375px;
+        width: 375px;
+        bottom:-79px;
+        right: -167px;
+    }
+}
